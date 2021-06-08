@@ -37,6 +37,7 @@
       .tb-action-button{
         padding: 20px 0 16px;
       }
+      color:#24315B !important;
     }
 
     .oauth-container{
@@ -90,4 +91,9 @@
     }
   }
 }
-
+.tb-default .mat-form-field-appearance-legacy .mat-form-field-underline{
+  background-color: #24315B !important;
+}
+mat-icon{
+  color: #2B897B !important;
+}

@@ -544,7 +544,8 @@ mat-label {
   mat-toolbar.mat-primary {
     button.mat-icon-button {
       mat-icon {
-        color: white;
+        // color: white;
+        color:#24315B !important;
       }
     }
   }
@@ -983,14 +984,14 @@ mat-label {
         &::after {
           transition: none;
         }
-        &.dropping {
+       // &.dropping {
           //border: dashed 2px;
           //opacity: .5;
 
           //.md-chip-content {
           //  margin: -2px;
           //}
-        }
+      //  }
 
         &.dropping-before {
           &::after {
@@ -1058,4 +1059,53 @@ mat-label {
   .tb-toast-panel {
     pointer-events: none !important;
   }
+}
+.tb-default .mat-flat-button.mat-primary, .tb-default .mat-raised-button.mat-primary, .tb-default .mat-fab.mat-primary, .tb-default .mat-mini-fab.mat-primary{
+  color:  #24315B !important;
+  // border: 1px solid;
+}
+.tb-default .mat-toolbar.mat-primary{
+  color:  #24315B !important;
+}
+// .mat-form-field{
+//   color: #2B897B !important;
+// }
+.tb-dark .mat-form-field-appearance-legacy .mat-form-field-underline{
+  background-color: #24315B !important;
+}
+.tb-default .mat-form-field-appearance-legacy .mat-form-field-label {
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+.tb-dark .mat-form-field.mat-form-field-invalid .mat-form-field-label{
+  color: #f44336 !important;
+}
+.tb-default .mat-step-header .mat-step-icon{
+  color: #24315B !important;
+}
+.tb-default .mat-button.mat-primary, .tb-default .mat-icon-button.mat-primary, .tb-default .mat-stroked-button.mat-primary{
+  color: #24315B !important;
+}
+.mat-option-text{
+  color: #24315B !important;
+}
+.tb-default .mat-input-element{
+  caret-color:#24315B ;
+}
+.mat-form-field-ripple {
+  background-color: #027D7C !important;
+}
+.tb-default .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle{
+  border-color: #24315B !important;
+}
+.tb-default .mat-radio-button.mat-primary .mat-radio-inner-circle, .tb-default .mat-radio-button.mat-primary .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .tb-default .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-persistent-ripple, .tb-default .mat-radio-button.mat-primary:active .mat-radio-persistent-ripple{
+  background-color: #24315B !important;
+}
+.mat-datetimepicker-calendar-header{
+  color: #24315B !important;
+} 
+.tb-default .mat-datetimepicker-calendar-body-cell-content.mat-datetimepicker-calendar-body-selected{
+  color: black !important;
+}
+.tb-default .mat-tab-group.mat-primary .mat-ink-bar, .tb-default .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+  background-color: #027D7C !important;
 }
