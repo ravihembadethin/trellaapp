@@ -23,10 +23,10 @@ import { Component } from '@angular/core';
 })
 export class LogoComponent {
 
-  logo = 'assets/Copy of Icon_Transparent_TM_CAD.png';
+  logo = 'assets/Grow_wyw_BlueLogo.png';
 
   gotoThingsboard(): void {
-    window.open('https://thingsboard.io', '_blank');
+    window.open('https://www.trella.io/', '_blank');
   }
 
 }
