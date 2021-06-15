@@ -122,7 +122,8 @@ export const widgetEditorBreadcumbLabelFunction: BreadCrumbLabelFunction<WidgetE
 
 export const routes: Routes = [
   {
-    path: 'widgets-bundles',
+    // path: 'widgets-bundles',
+    path: 'dashboard-builder',
     data: {
       breadcrumb: {
         label: 'widgets-bundle.widgets-bundles',

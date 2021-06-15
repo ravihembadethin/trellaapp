@@ -23,7 +23,8 @@ import { DevicesTableConfigResolver } from '@modules/home/pages/device/devices-t
 
 const routes: Routes = [
   {
-    path: 'devices',
+    // path: 'devices',
+    path: 'trellaUnits',
     component: EntitiesTableComponent,
     data: {
       auth: [Authority.TENANT_ADMIN, Authority.CUSTOMER_USER],

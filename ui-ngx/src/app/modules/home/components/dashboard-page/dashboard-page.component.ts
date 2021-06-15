@@ -687,7 +687,7 @@ export class DashboardPageComponent extends PageComponent implements IDashboardC
     if (!this.widgetEditMode) {
       this.dashboardCtx.stateController.cleanupPreservedStates();
       if (this.currentDashboardScope === 'customer' && this.authUser.authority === Authority.TENANT_ADMIN) {
-        this.router.navigateByUrl(`customers/${this.currentCustomerId}/dashboards/${dashboardId}`);
+        this.router.navigateByUrl(`Users/${this.currentCustomerId}/dashboards/${dashboardId}`);
       } else {
         if (this.singlePageMode) {
           this.router.navigateByUrl(`dashboard/${dashboardId}`);

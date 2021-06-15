@@ -123,28 +123,28 @@ export class CustomersTableConfigResolver implements Resolve<EntityTableConfig<C
     if ($event) {
       $event.stopPropagation();
     }
-    this.router.navigateByUrl(`customers/${customer.id.id}/users`);
+    this.router.navigateByUrl(`Users/${customer.id.id}/users`);
   }
 
   manageCustomerAssets($event: Event, customer: Customer) {
     if ($event) {
       $event.stopPropagation();
     }
-    this.router.navigateByUrl(`customers/${customer.id.id}/assets`);
+    this.router.navigateByUrl(`Users/${customer.id.id}/assets`);
   }
 
   manageCustomerDevices($event: Event, customer: Customer) {
     if ($event) {
       $event.stopPropagation();
     }
-    this.router.navigateByUrl(`customers/${customer.id.id}/devices`);
+    this.router.navigateByUrl(`Users/${customer.id.id}/devices`);
   }
 
   manageCustomerDashboards($event: Event, customer: Customer) {
     if ($event) {
       $event.stopPropagation();
     }
-    this.router.navigateByUrl(`customers/${customer.id.id}/dashboards`);
+    this.router.navigateByUrl(`Users/${customer.id.id}/dashboards`);
   }
 
   onCustomerAction(action: EntityAction<Customer>): boolean {

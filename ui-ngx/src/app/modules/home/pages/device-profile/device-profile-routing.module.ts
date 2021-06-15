@@ -23,7 +23,8 @@ import { DeviceProfilesTableConfigResolver } from './device-profiles-table-confi
 
 const routes: Routes = [
   {
-    path: 'deviceProfiles',
+    // path: 'deviceProfiles',
+    path: 'unitProfiles',
     data: {
       breadcrumb: {
         label: 'device-profile.device-profiles',

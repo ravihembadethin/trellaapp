@@ -98,7 +98,7 @@ export class RuleChainImportGuard implements CanActivate {
     if (this.itembuffer.hasRuleChainImport()) {
       return true;
     } else {
-      return this.router.parseUrl('ruleChains');
+      return this.router.parseUrl('thresholds&Notifications');
     }
   }
 
@@ -120,7 +120,8 @@ export const importRuleChainBreadcumbLabelFunction: BreadCrumbLabelFunction<Rule
 
 const routes: Routes = [
   {
-    path: 'ruleChains',
+    // path: 'ruleChains',
+    path: 'thresholds&Notifications',
     data: {
       breadcrumb: {
         label: 'rulechain.rulechains',

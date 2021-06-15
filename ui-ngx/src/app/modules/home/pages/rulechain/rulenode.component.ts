@@ -48,7 +48,7 @@ export class RuleNodeComponent extends FcNodeComponent implements OnInit {
       $event.stopPropagation();
     }
     if (node.targetRuleChainId) {
-      this.router.navigateByUrl(`/ruleChains/${node.targetRuleChainId}`);
+      this.router.navigateByUrl(`/thresholds&Notifications/${node.targetRuleChainId}`);
     }
   }
 }

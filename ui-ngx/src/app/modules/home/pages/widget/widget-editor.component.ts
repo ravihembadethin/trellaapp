@@ -553,7 +553,7 @@ export class WidgetEditorComponent extends PageComponent implements OnInit, OnDe
           this.isDirty = false;
           this.widgetService.saveWidgetTypeDetails(this.widget, undefined, saveWidgetAsData.bundleAlias, undefined).subscribe(
             (widgetTypeDetails) => {
-              this.router.navigateByUrl(`/widgets-bundles/${saveWidgetAsData.bundleId}/widgetTypes/${widgetTypeDetails.id.id}`);
+              this.router.navigateByUrl(`/dashboard-builder/${saveWidgetAsData.bundleId}/widgetTypes/${widgetTypeDetails.id.id}`);
             }
           );
         }

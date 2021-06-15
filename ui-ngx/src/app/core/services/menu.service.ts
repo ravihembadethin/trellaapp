@@ -100,7 +100,7 @@ export class MenuService {
         id: guid(),
         name: 'widget.widget-library',
         type: 'link',
-        path: '/widgets-bundles',
+        path: '/dashboard-builder',
         icon: 'now_widgets'
       },
       {
@@ -177,7 +177,7 @@ export class MenuService {
           {
             name: 'widget.widget-library',
             icon: 'now_widgets',
-            path: '/widgets-bundles'
+            path: '/dashboard-builder'
           }
         ]
       },
@@ -228,17 +228,17 @@ export class MenuService {
       },
       {
         id: guid(),
-        name: 'rulechain.rulechains',
+        name: 'dashboard.dashboards',
         type: 'link',
-        path: '/ruleChains',
-        icon: 'settings_ethernet'
+        path: '/dashboards',
+        icon: 'dashboards'
       },
       {
         id: guid(),
-        name: 'customer.customers',
+        name: 'widget.widget-library',
         type: 'link',
-        path: '/customers',
-        icon: 'supervisor_account'
+        path: '/dashboard-builder',
+        icon: 'now_widgets'
       },
       {
         id: guid(),
@@ -251,38 +251,38 @@ export class MenuService {
         id: guid(),
         name: 'device.devices',
         type: 'link',
-        path: '/devices',
+        path: '/trellaUnits',
         icon: 'devices_other'
       },
       {
         id: guid(),
         name: 'device-profile.device-profiles',
         type: 'link',
-        path: '/deviceProfiles',
+        path: '/unitProfiles',
         icon: 'mdi:alpha-d-box',
         isMdiIcon: true
       },
       {
         id: guid(),
-        name: 'entity-view.entity-views',
+        name: 'rulechain.rulechains',
         type: 'link',
-        path: '/entityViews',
-        icon: 'view_quilt'
+        path: '/thresholds&Notifications',
+        icon: 'settings_ethernet'
       },
       {
         id: guid(),
-        name: 'widget.widget-library',
+        name: 'customer.customers',
         type: 'link',
-        path: '/widgets-bundles',
-        icon: 'now_widgets'
+        path: '/Users',
+        icon: 'supervisor_account'
       },
-      {
-        id: guid(),
-        name: 'dashboard.dashboards',
-        type: 'link',
-        path: '/dashboards',
-        icon: 'dashboards'
-      },
+      // {
+      //   id: guid(),
+      //   name: 'entity-view.entity-views',
+      //   type: 'link',
+      //   path: '/entityViews',
+      //   icon: 'view_quilt'
+      // },
       {
         id: guid(),
         name: 'admin.home-settings',
@@ -290,21 +290,21 @@ export class MenuService {
         path: '/settings/home',
         icon: 'settings_applications'
       },
-      {
-        id: guid(),
-        name: 'audit-log.audit-logs',
-        type: 'link',
-        path: '/auditLogs',
-        icon: 'track_changes'
-      },
-      {
-        id: guid(),
-        name: 'api-usage.api-usage',
-        type: 'link',
-        path: '/usage',
-        icon: 'insert_chart',
-        notExact: true
-      }
+      // {
+      //   id: guid(),
+      //   name: 'audit-log.audit-logs',
+      //   type: 'link',
+      //   path: '/auditLogs',
+      //   icon: 'track_changes'
+      // },
+      // {
+      //   id: guid(),
+      //   name: 'api-usage.api-usage',
+      //   type: 'link',
+      //   path: '/usage',
+      //   icon: 'insert_chart',
+      //   notExact: true
+      // }
     );
     return sections;
   }
@@ -313,22 +313,17 @@ export class MenuService {
     const homeSections: Array<HomeSection> = [];
     homeSections.push(
       {
-        name: 'rulechain.management',
+        name: 'dashboard.management',
         places: [
           {
-            name: 'rulechain.rulechains',
-            icon: 'settings_ethernet',
-            path: '/ruleChains'
-          }
-        ]
-      },
-      {
-        name: 'customer.management',
-        places: [
+            name: 'dashboard.dashboards',
+            icon: 'dashboard',
+            path: '/dashboards'
+          },
           {
-            name: 'customer.customers',
-            icon: 'supervisor_account',
-            path: '/customers'
+            name: 'widget.widget-library',
+            icon: 'now_widgets',
+            path: '/dashboard-builder'
           }
         ]
       },
@@ -348,56 +343,62 @@ export class MenuService {
           {
             name: 'device.devices',
             icon: 'devices_other',
-            path: '/devices'
+            path: '/trellaUnits'
           },
           {
             name: 'device-profile.device-profiles',
             icon: 'mdi:alpha-d-box',
             isMdiIcon: true,
-            path: '/deviceProfiles'
+            path: '/unitProfiles'
+          }
+        ]
+      },
+      // {
+      //   name: 'entity-view.management',
+      //   places: [
+      //     {
+      //       name: 'entity-view.entity-views',
+      //       icon: 'view_quilt',
+      //       path: '/entityViews'
+      //     }
+      //   ]
+      // },
+      {
+        name: 'rulechain.management',
+        places: [
+          {
+            name: 'rulechain.rulechains',
+            icon: 'settings_ethernet',
+            path: '/thresholds&Notifications'
           }
         ]
       },
       {
-        name: 'entity-view.management',
+        name: 'customer.management',
         places: [
           {
-            name: 'entity-view.entity-views',
-            icon: 'view_quilt',
-            path: '/entityViews'
+            name: 'customer.customers',
+            icon: 'supervisor_account',
+            path: '/Users'
           }
         ]
       },
-      {
-        name: 'dashboard.management',
-        places: [
-          {
-            name: 'widget.widget-library',
-            icon: 'now_widgets',
-            path: '/widgets-bundles'
-          },
-          {
-            name: 'dashboard.dashboards',
-            icon: 'dashboard',
-            path: '/dashboards'
-          }
-        ]
-      },
-      {
-        name: 'audit-log.audit',
-        places: [
-          {
-            name: 'audit-log.audit-logs',
-            icon: 'track_changes',
-            path: '/auditLogs'
-          },
-          {
-            name: 'api-usage.api-usage',
-            icon: 'insert_chart',
-            path: '/usage'
-          }
-        ]
-      }
+      
+      // {
+      //   name: 'audit-log.audit',
+      //   places: [
+      //     {
+      //       name: 'audit-log.audit-logs',
+      //       icon: 'track_changes',
+      //       path: '/auditLogs'
+      //     },
+      //     {
+      //       name: 'api-usage.api-usage',
+      //       icon: 'insert_chart',
+      //       path: '/usage'
+      //     }
+      //   ]
+      // }
     );
     return homeSections;
   }
@@ -424,7 +425,7 @@ export class MenuService {
         id: guid(),
         name: 'device.devices',
         type: 'link',
-        path: '/devices',
+        path: '/trellaUnits',
         icon: 'devices_other'
       },
       {
@@ -463,7 +464,7 @@ export class MenuService {
           {
             name: 'device.devices',
             icon: 'devices_other',
-            path: '/devices'
+            path: '/trellaUnits'
           }
         ]
       },

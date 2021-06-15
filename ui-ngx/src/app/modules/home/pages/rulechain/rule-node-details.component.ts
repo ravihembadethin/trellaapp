@@ -147,7 +147,7 @@ export class RuleNodeDetailsComponent extends PageComponent implements OnInit, O
       $event.stopPropagation();
     }
     if (this.ruleNode.targetRuleChainId) {
-      this.router.navigateByUrl(`/ruleChains/${this.ruleNode.targetRuleChainId}`);
+      this.router.navigateByUrl(`/thresholds&Notifications/${this.ruleNode.targetRuleChainId}`);
     }
   }
 }
