@@ -125,7 +125,7 @@ export class AppComponent implements OnInit {
   }
 
   onActivateComponent($event: any) {
-    const loadingElement = $('div#tb-loading-spinner');
+    const loadingElement =  $('div#tb-loading-spinner');
     if (loadingElement.length) {
       loadingElement.remove();
     }
