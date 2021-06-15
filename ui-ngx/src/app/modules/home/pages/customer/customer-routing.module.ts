@@ -30,7 +30,8 @@ import { dashboardBreadcumbLabelFunction, DashboardResolver } from '@home/pages/
 
 const routes: Routes = [
   {
-    path: 'customers',
+    // path: 'customers',
+    path: 'Users',
     data: {
       breadcrumb: {
         label: 'customer.customers',
