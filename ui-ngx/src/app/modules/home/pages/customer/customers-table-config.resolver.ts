@@ -137,7 +137,7 @@ export class CustomersTableConfigResolver implements Resolve<EntityTableConfig<C
     if ($event) {
       $event.stopPropagation();
     }
-    this.router.navigateByUrl(`Users/${customer.id.id}/devices`);
+    this.router.navigateByUrl(`Users/${customer.id.id}/trellaUnit`);
   }
 
   manageCustomerDashboards($event: Event, customer: Customer) {

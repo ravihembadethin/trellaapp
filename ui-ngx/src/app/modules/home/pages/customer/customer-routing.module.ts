@@ -66,7 +66,7 @@ const routes: Routes = [
         }
       },
       {
-        path: ':customerId/devices',
+        path: ':customerId/trellaUnit',
         component: EntitiesTableComponent,
         data: {
           auth: [Authority.TENANT_ADMIN],
