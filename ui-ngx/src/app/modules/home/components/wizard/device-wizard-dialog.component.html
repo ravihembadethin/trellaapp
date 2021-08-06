@@ -180,7 +180,7 @@
             (click)="previousStep()">{{ 'action.back' | translate }}</button>
     <span fxFlex></span>
     <button mat-stroked-button
-            color="primary"
+            color=""
             *ngIf="showNext"
             [disabled]="(isLoading$ | async)"
             (click)="nextStep()">{{ 'action.next-with-label' | translate:{label: (getFormLabel(this.selectedIndex+1) | translate)} }}</button>

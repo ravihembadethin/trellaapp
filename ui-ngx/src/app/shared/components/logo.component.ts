@@ -23,7 +23,8 @@ import { Component } from '@angular/core';
 })
 export class LogoComponent {
 
-  logo = 'assets/Grow_wyw_BlueLogo.png';
+  // logo = 'assets/Grow_wyw_BlueLogo.png';
+  logo = 'assets/Copy of Icon_Transparent_TM_CAD.png';
 
   gotoThingsboard(): void {
     window.open('https://www.trella.io/', '_blank');

@@ -24,7 +24,7 @@
   .tb-home-links {
     .mat-headline {
       font-size: 20px;
-      color: #2B897B !important;
+      color: #000000 !important;
       @media #{$mat-gt-xmd} {
         font-size: 24px;
       }
@@ -47,13 +47,14 @@
       width: 100%;
       height: 100%;
       max-width: 240px;
-      border: 1px solid #24315B ;
+      border: 1px solid #000000 ;
       // color:#24315B !important;
       // &:hover {
       //   border-bottom: none;
       // }
+      background-color: #f2efef !important;
       &:focus {
-        border-bottom:  1px solid #24315B ;
+        border-bottom:  1px solid #000000 ;
       }
       .mat-button-wrapper {
         width: 100%;
@@ -74,6 +75,7 @@
           font-weight: 400;
           line-height: 18px;
           white-space: normal;
+          color: #000000 !important;
         }
       }
       &.mat-raised-button.mat-primary {
@@ -85,4 +87,6 @@
     }
   }
 }
-
+.mat-icon {
+  color: #67CD19 !important;
+}

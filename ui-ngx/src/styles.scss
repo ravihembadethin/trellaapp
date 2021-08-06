@@ -66,7 +66,8 @@ select,
 textarea,
 td,
 th {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Raleway;
   font-size: 16px;
 }
 
@@ -79,7 +80,7 @@ a {
   color: #106cc8;
   text-decoration: none;
   border-bottom: 1px solid rgba(64, 84, 178, .25);
-
+  
   transition: border-bottom .35s;
 }
 
@@ -97,6 +98,7 @@ h6 {
   &, &.mat-headline {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    
   }
 }
 
@@ -110,6 +112,7 @@ h2 {
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 3.2rem;
+  font-weight: bold !important;
 }
 
 h3 {
@@ -544,8 +547,8 @@ mat-label {
   mat-toolbar.mat-primary {
     button.mat-icon-button {
       mat-icon {
-        // color: white;
-        color:#24315B !important;
+        color: white;
+        // color:#24315B !important;
       }
     }
   }
@@ -692,6 +695,8 @@ mat-label {
 
   .mat-header-cell {
     white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
     button.mat-sort-header-button {
       display: block;
       text-overflow: ellipsis;
@@ -715,7 +720,7 @@ mat-label {
   }
 
   .mat-cell, .mat-footer-cell {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .mat-cell, .mat-footer-cell, .mat-header-cell {
@@ -967,6 +972,7 @@ mat-label {
     display: flex;
     height: calc(100% - 60px);
     text-align: center;
+    font-family: Raleway !important;
   }
 
 
@@ -1061,11 +1067,15 @@ mat-label {
   }
 }
 .tb-default .mat-flat-button.mat-primary, .tb-default .mat-raised-button.mat-primary, .tb-default .mat-fab.mat-primary, .tb-default .mat-mini-fab.mat-primary{
-  color:  #24315B !important;
+  color:  #FFFFFF !important;
+  background-color:#FF931E !important ;
+  font-weight: bold;
   // border: 1px solid;
 }
 .tb-default .mat-toolbar.mat-primary{
-  color:  #24315B !important;
+  // color:  #24315B !important;
+  color:  #ffffff !important;
+  background-color:#25325C !important ;
 }
 // .mat-form-field{
 //   color: #2B897B !important;
@@ -1083,7 +1093,8 @@ mat-label {
   color: #24315B !important;
 }
 .tb-default .mat-button.mat-primary, .tb-default .mat-icon-button.mat-primary, .tb-default .mat-stroked-button.mat-primary{
-  color: #24315B !important;
+  // color: #24315B !important;
+  color: #FFFFFF !important;
 }
 .mat-option-text{
   color: #24315B !important;
@@ -1108,4 +1119,7 @@ mat-label {
 }
 .tb-default .mat-tab-group.mat-primary .mat-ink-bar, .tb-default .mat-tab-nav-bar.mat-primary .mat-ink-bar{
   background-color: #027D7C !important;
+}
+.mat-focus-indicator .mat-button .mat-button-base .mat-primary{
+  color: #000000 !important;
 }

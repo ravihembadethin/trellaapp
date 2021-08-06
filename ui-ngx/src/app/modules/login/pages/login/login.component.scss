@@ -19,8 +19,9 @@
   display: flex;
   flex: 1 1 0;
   .tb-login-content {
-    margin-top: 36px;
-    margin-bottom: 76px;
+    // margin-top: 36px;
+    // margin-bottom: 76px;
+    // background-color: #eee;
     background-color: #eee;
     .tb-login-form {
       @media #{$mat-gt-xs} {
@@ -33,11 +34,17 @@
           padding: 0 6px;
         }
       }
+      .forgot-background{
+        background-color: #25325C;
+        font-weight: bold;
+        font-family: Raleway;
+        
+      }
 
       .tb-action-button{
         padding: 20px 0 16px;
       }
-      color:#24315B !important;
+      color:#FFFFFF !important;
     }
 
     .oauth-container{
@@ -92,8 +99,58 @@
   }
 }
 .tb-default .mat-form-field-appearance-legacy .mat-form-field-underline{
-  background-color: #24315B !important;
+  // background-color: #24315B !important;
+  background-color: #000000 !important;
 }
+
 mat-icon{
-  color: #2B897B !important;
+  color: #25325C !important;
+}
+.tb-dark .mat-flat-button.mat-accent, .tb-dark .mat-raised-button.mat-accent, .tb-dark .mat-fab.mat-accent, .tb-dark .mat-mini-fab.mat-accent{
+  background-color: #FF931E !important;
+  font-weight: bold;
+}
+.mat-card{
+  padding: 0px !important;
+}
+
+.mat-input-element{
+  color: #000 !important;
+  font-family: Raleway;
+}
+.text-secondary{
+  color: #25325C;
+  font-weight: bold;
+  font-family: Raleway;
+}
+
+.bg-gray{
+  background-color: #FFFFFF;
+}
+
+.input-group-prepend {
+  margin-right: -1px;
+}
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.login-bg{
+  height: 100vh;
+}
+
+.d-lg-block {
+    display: block!important;
+}
+.col-md-8 {
+  -webkit-box-flex: 0;
+  // -ms-flex: 0 0 66.666667%;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+.text-white{
+  font-weight: bold;
 }

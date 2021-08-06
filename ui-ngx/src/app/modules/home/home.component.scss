@@ -41,7 +41,8 @@
         z-index: 2;
         flex-shrink: 0;
         white-space: nowrap;
-        border-bottom: 1px solid rgba(0, 0, 0, .12);
+        // border-bottom: 1px solid rgba(0, 0, 0, .12);
+        border-bottom: 1px solid #98988f69;
         & > div {
           // height: 64px;
           height: 139px;

@@ -16,7 +16,9 @@
 .input-wrapper {
   background: hsla(0, 0%, 100%, .2);
   border-radius: 8px;
-  color: rgb(255, 255, 255, .84);
+  // color: rgb(255, 255, 255, .84);
+  // color: #24315B;
+  color: #FFFFFF;
   padding: 5px 8px 5px 16px;
   height: 46px;
 
@@ -29,9 +31,11 @@
     border: none;
     background-color: transparent;
     color: #fff;
+    font-family: Raleway;
 
     &::placeholder {
-      color: #fff;
+      // color: #24315B;
+      color: #FFFFFF;
       opacity: .6;
       line-height: 26px;
     }

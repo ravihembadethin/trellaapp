@@ -50,7 +50,7 @@ export class HomeComponent extends PageComponent implements AfterViewInit, OnIni
   sidenavMode: 'over' | 'push' | 'side' = 'side';
   sidenavOpened = true;
 
-  logo = 'assets/Grow_wyw_BlueLogo.png';
+  logo = 'assets/Trella.png';
 
   @ViewChild('sidenav')
   sidenav: MatSidenav;

@@ -27,7 +27,8 @@
   }
 
   .tb-side-menu > li {
-    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    // border-bottom: 1px solid rgba(0, 0, 0, .12);
+    border-bottom: 1px solid #98988f69;
   }
 
   a.mat-button {
@@ -35,6 +36,7 @@
     overflow: hidden;
     line-height: 40px;
     border-radius: 0;
+    font-weight: bold;
     &:hover {
       border-bottom: none;
       background-color: rgba(255,255,255,0.08);
@@ -45,6 +47,7 @@
     &.tb-active {
       font-weight: 500;
       background-color: rgba(255, 255, 255, .15);
+      font-weight: bold;
     }
 
     .mat-button-wrapper {
