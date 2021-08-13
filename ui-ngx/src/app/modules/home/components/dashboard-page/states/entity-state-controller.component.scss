@@ -44,9 +44,11 @@
   mat-select {
     .mat-select-value {
       max-width: 200px;
+      font-family: Raleway !important;
       .mat-select-value-text {
         font-size: 18px;
         font-weight: 700;
+        font-family: Raleway !important;
       }
     }
   }

@@ -38,6 +38,7 @@ tb-widgets-bundle-select,
   .mat-select-value-text {
     display: block;
     width: 100%;
+    font-family: Raleway !important;
   }
 
   .tb-bundle-item {
@@ -75,7 +76,7 @@ mat-toolbar {
           .mat-select-value-text {
             font-size: 1.2rem;
             color: #fff;
-
+            font-family: Raleway !important;
             span:first-child::after {
               color: #fff;
             }

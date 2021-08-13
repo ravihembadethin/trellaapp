@@ -35,6 +35,7 @@ body, html {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: Raleway !important;
 }
 
 body {
@@ -42,6 +43,7 @@ body {
   padding: 0;
   background-color: #eee;
   overflow: hidden;
+  font-family: Raleway !important;
 }
 
 tb-root {
@@ -67,12 +69,13 @@ textarea,
 td,
 th {
   // font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-family: Raleway;
+  font-family: Raleway !important;
   font-size: 16px;
 }
 
 body {
   line-height: normal;
+  font-family: Raleway !important;
 }
 
 a {
@@ -80,7 +83,7 @@ a {
   color: #106cc8;
   text-decoration: none;
   border-bottom: 1px solid rgba(64, 84, 178, .25);
-  
+  font-family: Raleway !important;
   transition: border-bottom .35s;
 }
 
@@ -98,7 +101,7 @@ h6 {
   &, &.mat-headline {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    
+    font-family: Raleway !important;
   }
 }
 
@@ -249,8 +252,9 @@ label {
 
 div {
   &.tb-small {
-    font-size: 14px;
+    font-size: 15px;
     color: rgba(0, 0, 0, .54);
+    font-family: Raleway;
   }
 }
 
@@ -382,6 +386,7 @@ mat-label {
 .tb-error-messages {
   height: 24px; //30px
   margin-top: -6px;
+  font-family: Raleway !important;
 }
 
 .tb-error-message {
@@ -391,6 +396,7 @@ mat-label {
   font-size: 12px;
   line-height: 14px;
   color: rgb(221, 44, 0);
+  font-family: Raleway !important;
 }
 
 .tb-autocomplete {
@@ -401,10 +407,12 @@ mat-label {
     padding-top: 8px;
     border-bottom: 1px solid #eee;
     font-size: 14px;
+    font-family: Raleway !important;
     .mat-option-text {
       line-height: 24px;
       height: auto !important;
       white-space: normal !important;
+      font-family: Raleway !important;
     }
   }
   .mat-option.tb-not-found {
@@ -484,10 +492,12 @@ mat-label {
 
   button {
     pointer-events: all;
+    font-family: Raleway !important;
   }
 
   button.mat-menu-item {
     font-size: 15px;
+    font-family: Raleway !important
   }
 
   button.mat-fab.mat-fab-bottom-right {
@@ -517,6 +527,7 @@ mat-label {
   .mat-content {
     position: relative;
     overflow: auto;
+    font-family: Raleway;
   }
 
   .layout-wrap {
@@ -537,6 +548,7 @@ mat-label {
   button.mat-menu-item {
     overflow: hidden;
     fill: #737373;
+    font-family: Raleway !important;
     .tb-alt-text {
       float: right;
     }
@@ -584,6 +596,7 @@ mat-label {
     table-layout: auto;
     border-collapse: separate;
     margin: 0;
+    font-family: Raleway !important
   }
 
   mat-footer-row::after, mat-header-row::after, mat-row::after {
@@ -677,6 +690,7 @@ mat-label {
     border-style: solid;
     text-overflow: ellipsis;
     touch-action: auto !important;
+    font-family: Raleway !important;
     &:last-child {
       padding: 0 12px 0 0;
     }
@@ -987,6 +1001,7 @@ mat-label {
   .mat-chip-list.dragging {
     .mat-chip {
       &.mat-standard-chip {
+        font-family: Raleway !important;
         &::after {
           transition: none;
         }
@@ -1070,12 +1085,14 @@ mat-label {
   color:  #FFFFFF !important;
   background-color:#FF931E !important ;
   font-weight: bold;
+  font-family: Raleway !important;
   // border: 1px solid;
 }
 .tb-default .mat-toolbar.mat-primary{
   // color:  #24315B !important;
   color:  #ffffff !important;
   background-color:#25325C !important ;
+  font-family: Raleway !important;
 }
 // .mat-form-field{
 //   color: #2B897B !important;
@@ -1085,9 +1102,11 @@ mat-label {
 }
 .tb-default .mat-form-field-appearance-legacy .mat-form-field-label {
   color: rgba(0, 0, 0, 0.54) !important;
+  font-family: Raleway !important;
 }
 .tb-dark .mat-form-field.mat-form-field-invalid .mat-form-field-label{
   color: #f44336 !important;
+  font-family: Raleway !important;
 }
 .tb-default .mat-step-header .mat-step-icon{
   color: #24315B !important;
@@ -1095,12 +1114,15 @@ mat-label {
 .tb-default .mat-button.mat-primary, .tb-default .mat-icon-button.mat-primary, .tb-default .mat-stroked-button.mat-primary{
   // color: #24315B !important;
   color: #FFFFFF !important;
+  font-family: Raleway !important;
 }
 .mat-option-text{
   color: #24315B !important;
+  font-family: Raleway !important;
 }
 .tb-default .mat-input-element{
   caret-color:#24315B ;
+  font-family: Raleway !important;
 }
 .mat-form-field-ripple {
   background-color: #027D7C !important;
@@ -1117,9 +1139,17 @@ mat-label {
 .tb-default .mat-datetimepicker-calendar-body-cell-content.mat-datetimepicker-calendar-body-selected{
   color: black !important;
 }
+// .mat-datetimepicker-calendar{
+//   font-family: Raleway !important;
+// }
 .tb-default .mat-tab-group.mat-primary .mat-ink-bar, .tb-default .mat-tab-nav-bar.mat-primary .mat-ink-bar{
   background-color: #027D7C !important;
 }
 .mat-focus-indicator .mat-button .mat-button-base .mat-primary{
   color: #000000 !important;
+}
+.tb-default .mat-select-value,.tb-entity-table .tb-entity-table-content .tb-entity-table-title,
+.mat-datetimepicker-calendar,.mat-headline,.mat-checkbox-label,.mat-focus-indicator,.tb-prompt,
+.mat-error,.mat-paginator-container,.MuiFormLabel-root,.MuiTypography-body1{
+  font-family: Raleway !important;
 }
