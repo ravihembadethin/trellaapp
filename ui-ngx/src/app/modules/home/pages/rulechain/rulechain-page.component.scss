@@ -161,6 +161,7 @@
   .fc-canvas {
     .fc-node {
       border-radius: 8px;
+      font-family: 'Raleway', sans-serif;
       &.fc-selected {
         &:not(.fc-edit) {
           margin: -3px;
@@ -295,9 +296,11 @@
 .tb-rule-node-tooltip,
 .tb-rule-node-error-tooltip,
 .tb-rule-node-help {
+  font-family: 'Raleway', sans-serif;
   #tb-node-content {
     .tb-node-title {
       font-weight: 600;
+      
     }
 
     .tb-node-description {

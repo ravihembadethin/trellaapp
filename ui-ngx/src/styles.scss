@@ -101,7 +101,8 @@ h6 {
   &, &.mat-headline {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-family: Raleway !important;
+    // font-family: Raleway !important;
+    font-family: 'Raleway', sans-serif !important;
   }
 }
 
@@ -285,7 +286,8 @@ pre.tb-highlight {
     box-sizing: border-box;
     display: inline-block;
     padding: 0;
-    font-family: monospace;
+    font-family: 'Raleway', sans-serif !important;
+    // font-family: monospace;
     font-size: 16px;
     font-weight: 700;
     color: #303030;
@@ -863,6 +865,7 @@ mat-label {
     h1, h2, h3, h4, h5, h6 {
       overflow: hidden;
       text-overflow: ellipsis;
+      font-family: 'Raleway', sans-serif !important;
     }
   }
 
