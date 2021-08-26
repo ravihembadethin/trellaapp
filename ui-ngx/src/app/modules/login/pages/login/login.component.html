@@ -28,8 +28,8 @@
         <fieldset [disabled]="isLoading$ | async" fxLayout="column">
           <div class="forgot-background">
             <div class="row" style="display: flex;padding:7px;">
-              <div fxLayoutAlign="center">
-                <tb-logo class="login-logo"></tb-logo>
+              <div >
+                <tb-logo class="login-logo" style="width: 300px !important"></tb-logo>
               </div>
               <div class="forgot-password" style="margin-top: auto;">
                 <button class="tb-reset-password text-white" mat-button type="button" routerLink="/login/resetPasswordRequest">{{ 'login.forgot-password' | translate }}
