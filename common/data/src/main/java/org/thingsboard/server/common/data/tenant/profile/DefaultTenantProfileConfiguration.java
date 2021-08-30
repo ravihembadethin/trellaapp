@@ -25,6 +25,7 @@ public class DefaultTenantProfileConfiguration implements TenantProfileConfigura
     private long maxDevices;
     private long maxAssets;
     private long maxCustomers;
+    private long maxTasks;
     private long maxUsers;
     private long maxDashboards;
     private long maxRuleChains;

@@ -28,6 +28,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.thingsboard.server.common.data.Customer;
+import org.thingsboard.server.common.data.Trella;
+import org.thingsboard.server.common.data.Tasks;
 import org.thingsboard.server.common.data.Dashboard;
 import org.thingsboard.server.common.data.DashboardInfo;
 import org.thingsboard.server.common.data.DataConstants;
@@ -53,6 +55,8 @@ import org.thingsboard.server.common.data.exception.ThingsboardException;
 import org.thingsboard.server.common.data.id.AlarmId;
 import org.thingsboard.server.common.data.id.AssetId;
 import org.thingsboard.server.common.data.id.CustomerId;
+import org.thingsboard.server.common.data.id.TasksId;
+import org.thingsboard.server.common.data.id.TrellaId;
 import org.thingsboard.server.common.data.id.DashboardId;
 import org.thingsboard.server.common.data.id.DeviceId;
 import org.thingsboard.server.common.data.id.DeviceProfileId;
@@ -77,7 +81,6 @@ import org.thingsboard.server.common.data.plugin.ComponentDescriptor;
 import org.thingsboard.server.common.data.plugin.ComponentType;
 import org.thingsboard.server.common.data.rule.RuleChain;
 import org.thingsboard.server.common.data.rule.RuleNode;
-import org.thingsboard.server.common.data.widget.WidgetType;
 import org.thingsboard.server.common.data.widget.WidgetTypeDetails;
 import org.thingsboard.server.common.data.widget.WidgetsBundle;
 import org.thingsboard.server.common.msg.TbMsg;
@@ -87,6 +90,8 @@ import org.thingsboard.server.dao.asset.AssetService;
 import org.thingsboard.server.dao.attributes.AttributesService;
 import org.thingsboard.server.dao.audit.AuditLogService;
 import org.thingsboard.server.dao.customer.CustomerService;
+import org.thingsboard.server.dao.trella.TrellaService;
+import org.thingsboard.server.dao.tasks.TasksService;
 import org.thingsboard.server.dao.dashboard.DashboardService;
 import org.thingsboard.server.dao.device.ClaimDevicesService;
 import org.thingsboard.server.dao.device.DeviceCredentialsService;
@@ -158,6 +163,12 @@ public abstract class BaseController {
 
     @Autowired
     protected CustomerService customerService;
+
+    @Autowired
+    protected TrellaService trellaService;
+
+     @Autowired
+     protected TasksService tasksService;
 
     @Autowired
     protected UserService userService;
@@ -389,7 +400,31 @@ public abstract class BaseController {
         }
     }
 
-    User checkUserId(UserId userId, Operation operation) throws ThingsboardException {
+    Trella checkTrellaId(TrellaId trellaId, Operation operation) throws ThingsboardException {
+        try {
+            
+            Trella trella = trellaService.findTrellaById(getTenantId(), trellaId);
+           // System.out.println("Hello trellaid");
+          
+            return trella;
+        } catch (Exception e) {
+            throw handleException(e, false);
+        }
+    }
+    Tasks checkTasksId(TasksId tasksId, Operation operation) throws ThingsboardException {
+        try {
+            //validateId(trellaId, "Incorrect trellaId " + trellaId);
+            Tasks tasks = tasksService.findTasksById(getTenantId(), tasksId);
+         //  System.out.println("Hello tasksid");
+            //checkNotNull(trella);
+          // accessControlService.checkPermission(getCurrentUser(), Resource.TRELLA, operation, trellaId, trella);
+            return tasks;
+        } catch (Exception e) {
+            throw handleException(e, false);
+        }
+    }
+    User checkUserId(UserId userId, Operation operation) throws ThingsboardException 
+    {
         try {
             validateId(userId, "Incorrect userId " + userId);
             User user = userService.findUserById(getCurrentUser().getTenantId(), userId);
@@ -426,6 +461,12 @@ public abstract class BaseController {
                     return;
                 case CUSTOMER:
                     checkCustomerId(new CustomerId(entityId.getId()), operation);
+                    return;
+                case TRELLA:
+                    checkTrellaId(new TrellaId(entityId.getId()), operation);
+                    return;
+                case TASKS:
+                    checkTasksId(new TasksId(entityId.getId()), operation);
                     return;
                 case TENANT:
                     checkTenantId(new TenantId(entityId.getId()), operation);
@@ -476,6 +517,7 @@ public abstract class BaseController {
             throw handleException(e, false);
         }
     }
+
 
     DeviceInfo checkDeviceInfoId(DeviceId deviceId, Operation operation) throws ThingsboardException {
         try {

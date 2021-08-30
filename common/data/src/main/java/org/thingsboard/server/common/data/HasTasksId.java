@@ -15,9 +15,9 @@
  */
 package org.thingsboard.server.common.data;
 
-/**
- * @author Andrew Shvayka
- */
-public enum EntityType {
-    TENANT, TRELLA,TASKS,CUSTOMER, USER, DASHBOARD, ASSET, DEVICE, ALARM, RULE_CHAIN, RULE_NODE, ENTITY_VIEW, WIDGETS_BUNDLE, WIDGET_TYPE, TENANT_PROFILE, DEVICE_PROFILE, API_USAGE_STATE;
+import org.thingsboard.server.common.data.id.TasksId;
+
+public interface HasTasksId {
+
+    TasksId getTasksId();
 }

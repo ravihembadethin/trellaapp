@@ -19,7 +19,10 @@ import com.datastax.oss.driver.api.core.uuid.Uuids;
 import org.apache.commons.lang3.ArrayUtils;
 import org.thingsboard.server.common.data.id.TenantId;
 import org.thingsboard.server.common.data.kv.Aggregation;
+import org.thingsboard.server.common.data.id.TrellaId;
+import org.thingsboard.server.common.data.id.TasksId;
 
+import java.sql.Date;
 import java.util.UUID;
 
 public class ModelConstants {
@@ -140,6 +143,48 @@ public class ModelConstants {
     public static final String CUSTOMER_BY_TENANT_AND_SEARCH_TEXT_COLUMN_FAMILY_NAME = "customer_by_tenant_and_search_text";
     public static final String CUSTOMER_BY_TENANT_AND_TITLE_VIEW_NAME = "customer_by_tenant_and_title";
 
+
+
+    /**
+     * Trella
+     */
+
+     /**
+     * Trella
+     */
+    public static final String TRELLA_COLUMN_FAMILY_NAME = "trella";
+    public static final String TRELLA_TENANT_ID_PROPERTY = TENANT_ID_PROPERTY;
+    public static final String TRELLA_PLANT_NAME_PROPERTY = "plant_name";
+    public static final String TRELLA_PLANT_TYPE_PROPERTY = "plant_type";
+    public static final String TRELLA_START_DATE_PROPERTY = "start_date";
+    public static final String TRELLA_VEGETATION_DAYS_PROPERTY = "vegetation_days";
+    public static final String TRELLA_FLOWERING_DAYS_PROPERTY = "flowering_days";
+    public static final String TRELLA_SEARCH_TEXT_PROPERTY = "searchText";
+
+  /**
+     * Tasks
+     */
+
+     /**
+     * Tasks
+     */
+    public static final String TASKS_COLUMN_FAMILY_NAME = "tasks";
+    public static final String TASKS_TENANT_ID_PROPERTY = TENANT_ID_PROPERTY;
+    //private static final String TRELLA_ID_PROPERTY = ;
+    //public static final String TASKS_TRELLA_ID_PROPERTY = TRELLA_ID_PROPERTY;
+    public static final String TASKS_TRELLA_ID_PROPERTY = "trellaId";
+    public static final String TASKS_WATER_PROPERTY = "water";
+    public static final String TASKS_TRIM_PROPERTY = "trim";
+    public static final String TASKS_START_DATE_PROPERTY = "start_date";
+    public static final String TASKS_FEED_PROPERTY = "feed";
+    public static final String TASKS_TRANSPLANT_PROPERTY = "transplant";
+    public static final String TASKS_SEARCH_TEXT_PROPERTY = "searchText";
+    public static final String TASKS_DEFOL_PROPERTY = "defol";
+    public static final String TASKS_INSPECT_PROPERTY = "inspect";
+    public static final String TASKS_JOURNAL_NOTES_PROPERTY = "journal_note";
+    
+ 
+   
     /**
      * Cassandra device constants.
      */

@@ -15,9 +15,37 @@
  */
 package org.thingsboard.server.common.data;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import org.thingsboard.server.common.data.id.TasksId;
+
 /**
- * @author Andrew Shvayka
+ * Created by igor on 2/27/18.
  */
-public enum EntityType {
-    TENANT, TRELLA,TASKS,CUSTOMER, USER, DASHBOARD, ASSET, DEVICE, ALARM, RULE_CHAIN, RULE_NODE, ENTITY_VIEW, WIDGETS_BUNDLE, WIDGET_TYPE, TENANT_PROFILE, DEVICE_PROFILE, API_USAGE_STATE;
+
+@AllArgsConstructor
+public class ShortTasksInfo {
+
+    @Getter @Setter
+    private TasksId tasksId;
+
+  
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ShortTasksInfo that = (ShortTasksInfo) o;
+
+        return tasksId.equals(that.tasksId);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return tasksId.hashCode();
+    }
 }
+ 
