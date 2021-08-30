@@ -32,6 +32,6 @@ public interface TrellaService {
 
     void deleteTrella(TenantId tenantId, TrellaId trellaId);
 
-    PageData<Trella> findTrellaByTenantId(TenantId tenantId, PageLink pageLink);
+   // PageData<Trella> findTrellaByTenantId(TenantId tenantId, PageLink pageLink);
 
 }

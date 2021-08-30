@@ -86,6 +86,7 @@ public class TasksController extends BaseController {
             // savedTasks.getId();
             // tasks.getId() == null ? ActionType.ADDED : ActionType.UPDATED, null);
             return savedTasks;
+
         } catch (Exception e) {
 
             logEntityAction(emptyId(EntityType.TASKS), tasks,
