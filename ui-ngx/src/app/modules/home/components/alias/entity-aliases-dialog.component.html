@@ -63,7 +63,7 @@
             </mat-slide-toggle>
           </section>
           <button [disabled]="isLoading$ | async"
-                  mat-icon-button color="primary"
+                  mat-icon-button color=""
                   style="min-width: 40px;"
                   type="button"
                   (click)="editAlias($index)"
@@ -72,7 +72,7 @@
             <mat-icon>edit</mat-icon>
           </button>
           <button [disabled]="isLoading$ | async"
-                  mat-icon-button color="primary"
+                  mat-icon-button color=""
                   style="min-width: 40px;"
                   type="button"
                   (click)="removeAlias($index)"
