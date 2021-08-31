@@ -103,12 +103,12 @@ public class TrellaServiceImpl extends AbstractEntityService implements TrellaSe
     }
    
 
-    @Override
+    /*@Override
     public PageData<Trella> findTrellaByTenantId(TenantId tenantId, PageLink pageLink) {
         log.trace("Executing findTrellaByTenantId, tenantId [{}], pageLink [{}]", tenantId, pageLink);
         Validator.validateId(tenantId, "Incorrect tenantId " + tenantId);
         Validator.validatePageLink(pageLink);
         return trellaDao.findTrellaByTenantId(tenantId.getId(), pageLink);
-    }
+    }*/
 
 }

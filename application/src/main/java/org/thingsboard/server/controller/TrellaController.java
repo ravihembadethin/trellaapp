@@ -68,28 +68,53 @@ public class TrellaController extends BaseController {
     }
 
 
-    @PreAuthorize("hasAuthority('TENANT_ADMIN')")
-    @RequestMapping(value = "/trella", method = RequestMethod.POST)
-    @ResponseBody
-    public Trella saveTrella(@RequestBody Trella trella) throws ThingsboardException {
+    // @PreAuthorize("hasAuthority('TENANT_ADMIN')")
+    // @RequestMapping(value = "/trella", method = RequestMethod.POST)
+    // @ResponseBody
+    // public Trella saveTrella(@RequestBody Trella trella) throws ThingsboardException {
+    //     try {
+    //        // System.out.println("save for trella");
+    //         trella.setTenantId(getCurrentUser().getTenantId());
+
+    //         //  checkEntity(trella.getId(), trella, Resource.TRELLA);
+
+    //         Trella savedTrella = checkNotNull(trellaService.saveTrella(trella));
+
+    //         //logEntityAction(savedTrella.getId(), savedTrella,
+    //       // savedTrella.getId(),
+    //        // trella.getId() == null ? ActionType.ADDED : ActionType.UPDATED, null);
+            
+    //         return savedTrella;
+    //     } catch (Exception e) {
+
+    //         logEntityAction(emptyId(EntityType.TRELLA), trella,
+    //                 null, trella.getId() == null ? ActionType.ADDED : ActionType.UPDATED, e);
+
+    //         throw handleException(e);
+    //     }
+    // }
+        @PreAuthorize("hasAuthority('TENANT_ADMIN')")
+        @RequestMapping(value = "/trella", method = RequestMethod.POST)
+        @ResponseBody
+        public Trella saveTrella(@RequestBody Trella trella) throws ThingsboardException {
         try {
-            System.out.println("save for trella");
-            trella.setTenantId(getCurrentUser().getTenantId());
+        //System.out.println("save for trella");
+        trella.setTenantId(getCurrentUser().getTenantId());
 
-            //  checkEntity(trella.getId(), trella, Resource.TRELLA);
+        // checkEntity(trella.getId(), trella, Resource.TRELLA);
 
-            Trella savedTrella = checkNotNull(trellaService.saveTrella(trella));
+        Trella savedTrella = checkNotNull(trellaService.saveTrella(trella));
 
 
-            return savedTrella;
+        return savedTrella;
         } catch (Exception e) {
 
-            logEntityAction(emptyId(EntityType.TRELLA), trella,
-                    null, trella.getId() == null ? ActionType.ADDED : ActionType.UPDATED, e);
+        logEntityAction(emptyId(EntityType.TRELLA), trella,
+        null, trella.getId() == null ? ActionType.ADDED : ActionType.UPDATED, e);
 
-            throw handleException(e);
+        throw handleException(e);
         }
-    }
+        }
 
     @PreAuthorize("hasAuthority('TENANT_ADMIN')")
     @RequestMapping(value = "/trella/{trellaId}", method = RequestMethod.DELETE)
