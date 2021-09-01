@@ -405,8 +405,8 @@ public abstract class BaseController {
 
             //validateId(trellaId, "Incorrect trellaId " + trellaId);
             Trella trella = trellaService.findTrellaById(getTenantId(), trellaId);
-          //  checkNotNull(trella);
-            //accessControlService.checkPermission(getCurrentUser(), Resource.TRELLA, operation, trellaId, trella);
+            //checkNotNull(trella);
+          //  accessControlService.checkPermission(getCurrentUser(), Resource.TRELLA, operation, trellaId, trella);
            // System.out.println("Hello trellaid");
           
             return trella;

@@ -75,7 +75,7 @@ public class TasksController extends BaseController {
     @ResponseBody
     public Tasks saveTasks(@RequestBody Tasks tasks) throws ThingsboardException {
         try {
-             System.out.println("save for trella");
+           //  System.out.println("save for trella");
             tasks.setTenantId(getCurrentUser().getTenantId());
             // tasks.setTrellaId(Trella.getTrellaId());
 

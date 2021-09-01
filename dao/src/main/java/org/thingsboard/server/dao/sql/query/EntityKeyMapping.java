@@ -89,6 +89,7 @@ public class EntityKeyMapping {
         allowedEntityFieldMap.put(EntityType.DEVICE, new HashSet<>(labeledEntityFields));
         allowedEntityFieldMap.put(EntityType.ASSET, new HashSet<>(labeledEntityFields));
         allowedEntityFieldMap.put(EntityType.ENTITY_VIEW, new HashSet<>(typedEntityFields));
+       // allowedEntityFieldMap.put(EntityType.TRELLA, new HashSet<>(typedEntityFields));
 
         allowedEntityFieldMap.put(EntityType.TENANT, new HashSet<>(contactBasedEntityFields));
         allowedEntityFieldMap.get(EntityType.TENANT).add(REGION);

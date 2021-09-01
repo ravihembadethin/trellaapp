@@ -67,6 +67,7 @@ public class TrellaServiceImpl extends AbstractEntityService implements TrellaSe
     @Autowired
     private TrellaService trellaService;
 
+
     @Override
     public Trella findTrellaById(TenantId tenantId, TrellaId trellaId) {
         log.trace("Executing findTrellaById [{}]", trellaId);
@@ -81,7 +82,7 @@ public class TrellaServiceImpl extends AbstractEntityService implements TrellaSe
         log.trace("Executing saveTrella [{}]", trella);
         //customerValidator.validate(customer, Customer::getTenantId);
         Trella savedTrella = trellaDao.save(trella.getTenantId(),trella);
-       // dashboardService.updateCustomerDashboards(savedTrella.getTenantId(), savedTrella.getId());
+      //  dashboardService.updateCustomerDashboards(savedTrella.getTenantId(), savedTrella.getId());
         return savedTrella;
     }
 
